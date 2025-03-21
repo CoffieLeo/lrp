@@ -1,0 +1,632 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="images/bootstrap.min.css">
+    <meta name="google-site-verification" content="oWHKC9vvXX-SvML4k72anifnz4bisY2f6e-6GuBzCzw" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="images/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="images/animate.min.css" />
+    <link rel="stylesheet" href="images/Layout.css"><!-- momo設計使用 勿更動 -->
+    <link rel="stylesheet" href="images/style_BIO.css">
+    <title>理膚寶水品牌旗艦-momo購物網</title>
+    <style>
+    /* 讓 CTA 按鈕固定在右下角 */
+        .cta-container {
+            position: fixed;
+            right: 1%; /* 靠右邊 */
+            bottom: 10%; /* 距離底部 */
+            z-index: 1000; /* 確保在最上層 */
+        }
+        
+        /* 限制圖片大小，避免變形 */
+        .cta-container img { 
+            width: 60px; /* 設定固定寬度 */
+            height: auto; /* 讓高度等比例縮放 */
+            display: block;
+            border-radius: 5px; /* 圓角 */
+        }
+        
+        /* ✅ 只在手機（max-width: 768px）隱藏 */
+        @media screen and (max-width: 768px) {
+            .cta-container {
+                display: none !important;
+            }
+        }
+        /*pc圖片一樣寬*/
+        .img_pc img{
+            width: 83%;
+            display: block;
+            margin: 0 auto;
+        }
+        /*第一塊輪播*/
+        .Area_01_1{
+           position: relative; 
+           overflow: hidden; 
+           transform: scale(0.91);
+        }
+        @media screen and (min-width: 768px) {
+            .img_pc.mt-4 {
+                margin-top: 4rem !important;
+            }
+        }
+        
+         @media screen and (max-width: 768px) {
+            .Area_01_1{
+                transform: scale(0.98);
+            }
+            .img_pc img{
+                width: 89%;
+            }
+         }
+         @media (max-width: 767px) {
+            .swiper-slide img {
+                width: 130%;  /* 放大圖片一點點，讓它不會顯得太小 */
+                height: auto; /* 確保圖片比例不會變形 */
+            }
+        }
+        @media (max-width: 767px) {
+            .swiper-slide img {
+                width: 100%;
+                height: auto; /* 確保圖片自適應 */
+            }
+        }
+        .CarouseBreath {
+            animation: Breath 4s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes Breath {
+            0% {
+                -webkit-filter: brightness(1) contrast(1);
+            }
+
+            50% {
+                -webkit-filter: brightness(1.1) contrast(1.1);
+            }
+
+            100% {
+                -webkit-filter: brightness(1) contrast(1);
+            }
+        }
+        .brightness1-play{ 
+            -webkit-animation:brightness1-play 2s infinite; 
+            animation:brightness1-play 3s infinite;
+        }
+        @keyframes brightness1-play {
+            0% { 
+                filter:brightness(100%);
+            }
+            88% { 
+                filter:brightness(100%);
+            }
+            90% { 
+                filter:brightness(120%);
+            }
+            96% { 
+                filter:brightness(100%);
+            }
+            98% { 
+                filter:brightness(120%);
+            }
+            100% { 
+                filter:brightness(100%);
+            }
+        }
+    </style>
+    <!-- BIOEDM ver0816 BNupdate-->
+</head>
+<!-- data-TimeSwitch_test="2022/07/29"-->
+
+<body>
+    <div>
+        <img src="images/topBtn.png" onclick="topFunction()" id="BIOScrolltoTopBtn" class="d-none d-md-block">
+    </div>
+    <div class="momoStyle_WRAPPER" style="overflow: hidden!important; margin-bottom:-20px;">
+        <div class="momoStyle_mainArea">
+            <!-- 選單 -->
+            <div class="container-fluid Area2000">
+                <div class="row justify-content-center ">
+                    <div class="col-md-1 col-2 offset-md-1 p-md-4 p-2">
+                        <img src="images/BIO-stamp-W.png">
+                    </div>
+                    <div class="col-md-5 col-10 pl-0">
+                        <img src="images/50EDMtitle.png">
+                    </div>
+                </div>
+                <div class="row justify-content-center pb-3 Area_SHUnavbar">
+                    <div class="col-md-9 col Area_SHUnavbar_box">
+                        <nav class="nav SHUnavbar nav-fill">
+                            <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4&sourcePageType=4" class="nav-item nav-link" target="_blank">
+                                品牌熱銷TOP
+                            </a>
+                            <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800053&p_orderType=6&showType=chessboardType" class="nav-item nav-link" target="_blank">
+                                全新專利美白精華
+                            </a>
+                            <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&showType=chessboardType" class="nav-item nav-link" target="_blank">
+                                新升級瑰蜜霜
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右側滑動 CTA -->
+            <div class="cta-container">
+                <!-- CTA 按鈕（圖片） -->
+                <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4&showType=chessboardType">
+                    <img src="images/50.png" alt="CTA 按鈕" class="cta-container">
+                </a>
+            </div>
+
+            <!-- KV 輪播 --> 
+            <div class="Area Area2000 Area_01" style="position: relative; overflow: hidden"> 
+                <div class="swiper-wrapper"> 
+                    <div class="swiper-slide"> 
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4&showType=chessboardType" target="_blank" title="全館主活動">
+                            <img src="images/1-1.jpg" alt="每月活動" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/1-1M.jpg" alt="每月活動" class="momoStyle_lazyload d-md-none d-block">
+                        </a> 
+                    </div> 
+                    <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&showType=chessboardType"
+                            target="_blank" title="B3">
+                            <img src="images/CICA-1_PC.jpg" alt="CICA" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/CICA-1_MB.png" alt="CICA" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div>  
+                    <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&showType=chessboardType"
+                            target="_blank" title="B3">
+                            <img src="images/AA-Serum_2000x450.jpg" alt="抗老精華" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/AA-Serum_960x960_.jpg" alt="抗老精華" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4"
+                            target="_blank" title="UV">
+                            <img src="images/UV_2000x450.jpg" alt="UV" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/UV_960x960.jpg" alt="UV" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800053&p_orderType=6&showType=chessboardType" target="_blank" title="MELA">
+                            <img src="images/1-2.jpg" alt="MELA" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/1-2M.jpg" alt="MELA" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4"
+                            target="_blank" title="HYALU B5">
+                            <img src="images/1-4.jpg" alt="HYALU B5" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/1-4M.jpg" alt="HYALU B5" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4"
+                            target="_blank" title="醫美No.1">
+                            <img src="images/1-7.jpg" alt="醫美No.1" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/1-7M.jpg" alt="醫美No.1" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div>
+
+                    <!-- <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&showType=chessboardType"
+                            target="_blank" title="B3">
+                            <img src="images/1-9.jpg" alt="AB小紅瓶" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/1-9M.jpg" alt="AB小紅瓶" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&sourcePageType=4" target="_blank" title="CICA">
+                            <img src="images/1-3.jpg" alt="CICA" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/1-3M.jpg" alt="CICA" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4&sourcePageType=4"
+                            target="_blank" title="B3">
+                            <img src="images/1-8.jpg" alt="C12肌光瓶 AB小紅瓶" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/1-8M.jpg" alt="C12肌光瓶 AB小紅瓶" class="momoStyle_lazyload d-md-none d-block">
+                        </a>
+                    </div> -->
+                    
+                    
+            </div> 
+            <div class="swiper-button-prev ml-md-5 ml-1 d-none d-md-block"></div> 
+            <div class="swiper-button-next mr-md-5 mr-1 d-none d-md-block"></div> 
+            <div class="swiper-pagination"></div> 
+            <!-- 輪播end -->
+        </div> 
+        <!--- 滿額好禮 -->     
+        <div class="container Area Area1220">     
+            <div class="row justify-content-center align-items-center pb-md-5 pb-4 px-md-5 px-1">
+                <div class="col-12 p-0 img_pc mt-4">
+                    <img class="momoStyle_is-pc" src="images/section01-t.jpg" alt="好禮狂送">
+                </div>                 
+                <div class="col-12 p-0 img_pc mb-4">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4&sourcePageType=4" target="_blank" title="好禮狂送">
+                        <img src="images/section01-1.jpg" alt="好禮狂送" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!-- BUNNY輪播 -->
+                <div class="col-12">
+                    <div class="swiper bunnySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13707585" target="_blank" title="BUNNY1">
+                                    <img src="images/Area_GiftBox_01.png" alt="BUNNY1" class="momoStyle_lazyload">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13707586" target="_blank" title="BUNNY2">
+                                    <img src="images/Area_GiftBox_02.png" alt="BUNNY2" class="momoStyle_lazyload">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13707587" target="_blank" title="BUNNY3">
+                                    <img src="images/Area_GiftBox_03.png" alt="BUNNY3" class="momoStyle_lazyload">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-prev ml-md-5 ml-1 d-none d-md-block"></div>
+                        <div class="swiper-button-next mr-md-5 mr-1 d-none d-md-block"></div>
+
+                        <!-- Pagination dots -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <!--- ROSY RENO -->     
+                <div class="col-12" id="uv">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&showType=chessboardType" target="_blank" title="16HR 防曬再升級">
+                        <img src="images/ROSY.png" alt="16HR 防曬再升級" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- 抗光老1+1 -->   
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&showType=chessboardType" target="_blank" title="抗光老1+1">
+                        <img src="images/ABRED.png" alt="抗光老1+1" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- 50 --> 
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&showType=chessboardType" target="_blank" title="CICA50">
+                        <img src="images/CICA_01.png" alt="CICA50" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- 50CICA --> 
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&sourcePageType=4" target="_blank" title="50CICA">
+                        <img src="images/50CICA.png" alt="50CICA" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- 4-Step --> 
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800218&p_orderType=4&showType=chessboardType" target="_blank" title="醫美術後 理膚寶水保養4步驟">
+                        <img src="images/4-Step Routine.png" alt="醫美術後 理膚寶水保養4步驟" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- C12 --> 
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&showType=chessboardType" target="_blank" title="全新 C12肌光活膚精華">
+                        <img src="images/C12.png" alt="全新 C12肌光活膚精華" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- MELA --> 
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800053&p_orderType=6&showType=chessboardType" target="_blank" title="全新 MELA B3 淡斑淨亮精華">
+                        <img src="images/MELA.png" alt="全新 MELA B3 淡斑淨亮精華" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- B3 --> 
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4" target="_blank" title="高效抗老精華挑選攻略">
+                        <img src="images/AntiagingScrum.png" alt="高效抗老精華挑選攻略" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- 3-step --> 
+                <div class="col-12">
+                    <a href="https://www.lrp.com.tw/Annualrecruitingprogram" target="_blank" title="3-Step">
+                        <img src="images/3-Step.png" alt="3-Step" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- 問問 -->      
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4&sourcePageType=4" target="_blank" title="問問">
+                        <img src="images/momoq.png" alt="問問" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <div class="col-12 pb-md-5 pb-4">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4&sourcePageType=4" target="_blank" title="問問">
+                        <img src="images/momo2.png" alt="問問" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                    </a>
+                </div>
+                <!--- TOP5 -->
+                <div class="col-12 col-md-8">
+                    <img class="momoStyle_is-pc" src="images/4_title.png" alt="TOP5熱銷">
+                </div>
+                <div class="col-12">
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&sourcePageType=4" target="_blank" title="B5+萬用霜全新升級!">
+                        <img src="images/top5_01.png" alt="B5+萬用霜全新升級!" class="d-none d-md-block">
+                        <img src="images/top5_01.png" alt="B5+萬用霜全新升級!" class="momoStyle_lazyload d-md-none d-block">
+                    </a>
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4" target="_blank" title="B5小藍瓶抗老精華，100%高修復力">
+                        <img src="images/top5_02.png" alt="B5小藍瓶抗老精華，100%高修復力" class="d-none d-md-block">
+                        <img src="images/top5_02.png" alt="B5小藍瓶抗老精華，100%高修復力" class="momoStyle_lazyload d-md-none d-block">
+                    </a>
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&showType=chessboardType" target="_blank" title="MELA B3 淡斑淨亮精華，87%頑固斑淡化 一周肌膚淨透亮">
+                        <img src="images/top5_03.png" alt="MELA B3 淡斑淨亮精華，87%頑固斑淡化 一周肌膚淨透亮" class="d-none d-md-block">
+                        <img src="images/top5_03.png" alt="MELA B3 淡斑淨亮精華，87%頑固斑淡化 一周肌膚淨透亮" class="momoStyle_lazyload d-md-none d-block">
+                    </a>
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800040&p_orderType=4&sourcePageType=4" target="_blank" title="安心小藍瓶，1滴舒緩敏感保濕">
+                        <img src="images/top5_04.png" alt="安心小藍瓶，1滴舒緩敏感保濕" class="d-none d-md-block">
+                        <img src="images/top5_04.png" alt="安心小藍瓶，1滴舒緩敏感保濕" class="momoStyle_lazyload d-md-none d-block">
+                    </a>
+                    <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4" target="_blank" title="閨蜜霜，最強美肌防曬!">
+                        <img src="images/top5_05.png" alt="閨蜜霜，最強美肌防曬!" class="d-none d-md-block">
+                        <img src="images/top5_05.png" alt="閨蜜霜，最強美肌防曬!" class="momoStyle_lazyload d-md-none d-block">
+                    </a>
+                </div>
+                <!--六大系列MAP-->
+                <div class="col-12 col-md-8">
+                    <img class="momoStyle_is-pc" src="images/6_title.png" alt="六大系列">
+                </div>
+                <!-- <div class="col-12">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <img src="images/top5_06.png" alt="ingredient" class="d-none d-md-block" usemap="#Map">
+                                <img src="images/top5_06.png" alt="ingredient" class="momoStyle_lazyload d-md-none d-block" usemap="#Map2">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+                <div class="col-12">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <img class="demo-img" src="images/ROSY_UV_navigation_.png" usemap="#image-map">
+                                <!-- <img class="momoStyle_lazyload d-md-none d-block" src="images/ROSY_UV_navigation_.png" usemap="#Map2"> -->
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PC -->
+    <map name="image-map">
+        <area target="_blank" alt="新瑰蜜霜" title="新瑰蜜霜" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&amp;p_orderType=4&amp;showType=chessboardType " coords="1258,692,62,2" shape="rect">
+        <area target="_blank" alt="控油亮白" title="控油亮白" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12969848 " coords="59,695,456,1392" shape="rect">
+        <area target="_blank" alt="粉嫩水光" title="粉嫩水光" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13729334 " coords="462,699,858,1391" shape="rect">
+        <area target="_blank" alt="潤色遮瑕" title="潤色遮瑕" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12861986 " coords="863,697,1256,1391" shape="rect">
+    </map>
+    <!-- Mobile -->
+    <!-- <map name="Map2">
+        <area target="_blank" alt="新瑰蜜霜" title="新瑰蜜霜" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&amp;p_orderType=4&amp;showType=chessboardType " coords="34,2,695,385" shape="rect">
+        <area target="_blank" alt="控油亮白" title="控油亮白" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12969848 " coords="35,388,253,769" shape="rect">
+        <area target="_blank" alt="粉嫩水光" title="粉嫩水光" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13729334 " coords="" shape="rect">
+        <area target="_blank" alt="潤色遮瑕" title="潤色遮瑕" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12861986 " coords="" shape="rect">
+    </map> -->
+    <!-- <map name="Map">
+        <area shape="rect" coords="0,0,382,411" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&sourcePageType=4" target="_blank" title="表皮修復系列">
+        <area shape="rect" coords="382,0,730,420" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800040&p_orderType=4&sourcePageType=4" target="_blank" title="多容安臉部護理系列">
+        <area shape="rect" coords="730,0,1124,420" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4" target="_blank" title="高效分子抗老系列">
+
+        <area shape="rect" coords="0,411,391,846" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&showType=chessboardType" target="_blank" title="美白淡斑系列">
+        <area shape="rect" coords="391,411,739,846" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800037&p_orderType=4&sourcePageType=4" target="_blank" title="油性皮膚青春痘系列">
+        <area shape="rect" coords="739,411,1124,846" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4" target="_blank" title="全護臉部清爽防曬系列">
+    </map>
+    <map name="Map2">
+        <area shape="rect" coords="0,0,139,151" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&sourcePageType=4" target="_blank" title="表皮修復系列">
+        <area shape="rect" coords="139,0,263,151" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800040&p_orderType=4&sourcePageType=4" target="_blank" title="多容安臉部護理系列">
+        <area shape="rect" coords="263,0,400,151" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4" target="_blank" title="高效分子抗老系列">
+
+        <area shape="rect" coords="0,151,139,300" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&showType=chessboardType" target="_blank" title="美白淡斑系列">
+        <area shape="rect" coords="139,151,263,300" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800037&p_orderType=4&sourcePageType=4" target="_blank" title="油性皮膚青春痘系列">
+        <area shape="rect" coords="263,151,400,300" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4" target="_blank" title="全護臉部清爽防曬系列">
+    </map>
+    <map name="Map3">
+        <area shape="rect" coords="0,0,350,172" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&sourcePageType=4" target="_blank" title="維生素原B5">
+        <area shape="rect" coords="0,172,350,323" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4" target="_blank" title="積雪草">
+        <area shape="rect" coords="0,323,350,501" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800037&p_orderType=4&sourcePageType=4" target="_blank" title="LHA">
+
+        <area shape="rect" coords="350,0,700,171" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800040&p_orderType=4&sourcePageType=4" target="_blank" title="神經胜肽">
+        <area shape="rect" coords="350,172,700,323" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4" target="_blank" title="菸鹼醯胺">
+        <area shape="rect" coords="350,323,700,501" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4" target="_blank" title="UVA">
+    </map>
+    <map name="Map4">
+        <area shape="rect" coords="0,0,200,97" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800093&p_orderType=4&sourcePageType=4" target="_blank" title="維生素原B5">
+        <area shape="rect" coords="0,97,200,184" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4" target="_blank" title="積雪草">
+        <area shape="rect" coords="0,184,200,286" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800037&p_orderType=4&sourcePageType=4" target="_blank" title="LHA">
+
+        <area shape="rect" coords="200,0,400,97" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800040&p_orderType=4&sourcePageType=4" target="_blank" title="神經胜肽">
+        <area shape="rect" coords="200,97,400,284" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&sourcePageType=4" target="_blank" title="菸鹼醯胺">
+        <area shape="rect" coords="350,184,400,286" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4" target="_blank" title="UVA">
+    </map> -->
+
+    <script src="images/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="images/jquery-3.6.0.min.js"></script>
+    <script src="images/bootstrap.bundle.js"></script>
+    <script src="images/owl.carousel.min.js"></script>
+    <script src="images/body.js"></script>
+    <script src="images/wow.min.js"></script>
+    <script src="images/jquery.rwdImageMaps.min.js"></script>
+    <!-- Swiper 初始化 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var bunnySwiper = new Swiper('.bunnySwiper', {
+                loop: true, // 啟用循環播放
+                autoplay: {
+                delay: 5000, // 5秒自動切換
+                disableOnInteraction: false, // 使用者操作後仍然繼續自動播放
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true, // 允許點擊切換
+                },
+                breakpoints: {
+                    // 針對不同屏幕大小做調整
+                    320: {
+                        slidesPerView: 1, // 小屏幕顯示一個幻燈片
+                        spaceBetween: 0,
+                    },
+                    768: {
+                        slidesPerView: 1, // 中等屏幕顯示兩個幻燈片
+                        spaceBetween: 0,
+                    },
+                    1024: {
+                        slidesPerView: 1, // 大屏幕顯示三個幻燈片
+                        spaceBetween: 0,
+                    },
+                },
+            });
+        });
+        
+        new WOW().init();
+        /*
+             * Ghvzon
+             * 指定時間開關物件 TimeSwitch-v1.1
+             *******************************************************************
+             * 啟動器: style="display:none;" data-TimeSwitch_start="2020/1/01 00:00:00" data-TimeSwitch_end="2020/1/21 23:59:59" data-TimeSwitch_Myswitch="1"
+             * 測試時間: data-TimeSwitch_test="2020/1/20 00:00:00"
+             * 說明:
+             * data-TimeSwitch_start    開始時間
+             * data-TimeSwitch_end      結束時間
+             * data-TimeSwitch_Myswitch 動作 0刪除、1打開
+             *******************************************************************
+             */
+        $(function () {
+            //測試時間
+            var TimeSwitch_test = $("[data-TimeSwitch_test]").attr('data-TimeSwitch_test');
+            if (TimeSwitch_test) {
+                TimeSwitch = new Date(TimeSwitch_test);
+                console.log('TimeSwitch_test ing!! ' + TimeSwitch_test)
+            } else {
+                TimeSwitch = new Date();
+            }
+            var TimeSwitchmonth = TimeSwitch.getMonth() + 1; //月
+            var TimeSwitchday = TimeSwitch.getDate(); //日
+            var TimeSwitchhour = TimeSwitch.getHours(); //時
+            var TimeSwitchminute = TimeSwitch.getMinutes(); //分
+            var TimeSwitchsecond = TimeSwitch.getSeconds(); //秒
+            var TimeSwitchweek = TimeSwitch.getDay(); //星期0~6 
+            $("[data-TimeSwitch_start]").each(function () {
+                var $self = $(this);
+                if (TimeSwitchmonth < 10) {
+                    TimeSwitchmonth = '0' + TimeSwitchmonth;
+                }
+                if (TimeSwitchday < 10) {
+                    TimeSwitchday = '0' + TimeSwitchday;
+                }
+                //範圍時間
+                var Mydate_start = new Date($self.attr('data-TimeSwitch_start'));
+                var Mydate_end = new Date($self.attr('data-TimeSwitch_end'));
+                var Myswitch = $self.attr('data-TimeSwitch_Myswitch');
+                //Myswitch = 0 隱藏
+                console.log('TimeSwitch_now ' + TimeSwitch)
+                if (Myswitch == 0) {
+                    if (Mydate_start <= TimeSwitch && TimeSwitch <= Mydate_end) {
+                        $self.remove(); //Myswitch:0, 時間內,刪除
+                    } else {
+                        $self.show(); //Myswitch:0, 時間外,打開
+                    }
+                }
+                //Myswitch = 1 打開
+                if (Myswitch == 1) {
+                    if (Mydate_start <= TimeSwitch && TimeSwitch <= Mydate_end) {
+                        $self.show(); //Myswitch:1, 時間內,打開
+                    } else {
+                        $self.remove(); //Myswitch:1, 時間外,刪除
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+			$.fn.snow({ minSize: 1, maxSize: 10, newOn: 300, flakeColor: '#FFFFFF' });
+            $('.demo-img').rwdImageMaps();
+
+            $('area').on('mouseover', function (e) {
+                $(this).focus();
+            });
+		});
+
+        var Area_01 = new Swiper('.Area_01', {
+
+            //★5.2.1★小圓點【基本】-白點swiper-pagination-white, 黑點swiper-pagination-black
+            pagination: {
+                el: '.Area_01 .swiper-pagination',
+                clickable: true, //觸擊切換
+            },
+            //★5.2.1★左右切換-白色箭頭swiper-button-white, 黑色箭頭swiper-button-black  
+            navigation: {
+                nextEl: '.Area_01 .swiper-button-next',
+                prevEl: '.Area_01 .swiper-button-prev',
+            },
+            //★5.2.1★自動撥放
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false, //觸擊後不再自動輪播
+            },
+            //★5.2.1★切換特效(淡化)
+            effect: 'slide', //切換特效 fade(淡化) cube(立方體) coverflow(3D) flip(翻牌) slide(一般)
+            fadeEffect: {
+                crossFade: true //打開自動淡出
+            },
+            //排版
+            slidesPerView: 1, //顯示幾個
+            slidesPerGroup: 1, //一次切換幾個
+            spaceBetween: 0, //間距
+            loop: true,
+            });
+            var Area_02 = new Swiper('.Area_02', {
+
+            //★5.2.1★小圓點【基本】-白點swiper-pagination-white, 黑點swiper-pagination-black
+            pagination: {
+                el: '.Area_02 .swiper-pagination',
+                clickable: true, //觸擊切換
+            },
+            //★5.2.1★左右切換-白色箭頭swiper-button-white, 黑色箭頭swiper-button-black  
+            navigation: {
+                nextEl: '.Area_02 .swiper-button-next',
+                prevEl: '.Area_02 .swiper-button-prev',
+            },
+            //★5.2.1★自動撥放
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false, //觸擊後不再自動輪播
+            },
+            //★5.2.1★切換特效(淡化)
+            effect: 'slide', //切換特效 fade(淡化) cube(立方體) coverflow(3D) flip(翻牌) slide(一般)
+            fadeEffect: {
+                crossFade: true //打開自動淡出
+            },
+            //排版
+            slidesPerView: 1, //顯示幾個
+            slidesPerGroup: 1, //一次切換幾個
+            spaceBetween: 0, //間距
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
