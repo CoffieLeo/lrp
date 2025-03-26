@@ -1,0 +1,102 @@
+/* 讓 CTA 按鈕固定在右下角 */
+.cta-container {
+    position: fixed;
+    right: 1%; /* 靠右邊 */
+    bottom: 10%; /* 距離底部 */
+    z-index: 1000; /* 確保在最上層 */
+}
+
+/* 限制圖片大小，避免變形 */
+.cta-container img { 
+    width: 60px; /* 設定固定寬度 */
+    height: auto; /* 讓高度等比例縮放 */
+    display: block;
+    border-radius: 5px; /* 圓角 */
+}
+
+/* ✅ 只在手機（max-width: 768px）隱藏 */
+@media screen and (max-width: 768px) {
+    .cta-container {
+        display: none !important;
+    }
+}
+/*pc圖片一樣寬*/
+.img_pc img{
+    width: 83%;
+    display: block;
+    margin: 0 auto;
+}
+/*第一塊輪播*/
+.Area_01_1{
+   position: relative; 
+   overflow: hidden; 
+   transform: scale(0.91);
+}
+@media screen and (min-width: 768px) {
+    .img_pc.mt-4 {
+        margin-top: 4rem !important;
+    }
+}
+
+ @media screen and (max-width: 768px) {
+    .Area_01_1{
+        transform: scale(0.98);
+    }
+    .img_pc img{
+        width: 89%;
+    }
+ }
+ @media (max-width: 767px) {
+    .swiper-slide img {
+        width: 130%;  /* 放大圖片一點點，讓它不會顯得太小 */
+        height: auto; /* 確保圖片比例不會變形 */
+    }
+}
+@media (max-width: 767px) {
+    .swiper-slide img {
+        width: 100%;
+        height: auto; /* 確保圖片自適應 */
+    }
+}
+.CarouseBreath {
+    animation: Breath 4s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes Breath {
+    0% {
+        -webkit-filter: brightness(1) contrast(1);
+    }
+
+    50% {
+        -webkit-filter: brightness(1.1) contrast(1.1);
+    }
+
+    100% {
+        -webkit-filter: brightness(1) contrast(1);
+    }
+}
+.brightness1-play{ 
+    -webkit-animation:brightness1-play 2s infinite; 
+    animation:brightness1-play 3s infinite;
+}
+@keyframes brightness1-play {
+    0% { 
+        filter:brightness(100%);
+    }
+    88% { 
+        filter:brightness(100%);
+    }
+    90% { 
+        filter:brightness(120%);
+    }
+    96% { 
+        filter:brightness(100%);
+    }
+    98% { 
+        filter:brightness(120%);
+    }
+    100% { 
+        filter:brightness(100%);
+    }
+}

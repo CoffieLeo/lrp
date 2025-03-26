@@ -1,9 +1,8 @@
 <!doctype html>
 <html>
-
 <head>
     <link rel="stylesheet" href="images/bootstrap.min.css">
-    <meta name="google-site-verification" content="oWHKC9vvXX-SvML4k72anifnz4bisY2f6e-6GuBzCzw" />
+    <meta name="google-site-verification" content="oWHKC9vvXX-SvML4k72anifnz4bisY2f6e-6GuBzCzw">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -12,118 +11,13 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="images/swiper.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="stylesheet" href="images/animate.min.css" />
-    <link rel="stylesheet" href="images/Layout.css"><!-- momo設計使用 勿更動 -->
+    <link rel="stylesheet" href="images/animate.min.css">
+    <!-- momo設計使用 勿更動 -->
+    <link rel="stylesheet" href="images/Layout.css">
     <link rel="stylesheet" href="images/style_BIO.css">
+    <link rel="stylesheet" href="images/main.css">
     <title>理膚寶水品牌旗艦-momo購物網</title>
-    <style>
-    /* 讓 CTA 按鈕固定在右下角 */
-        .cta-container {
-            position: fixed;
-            right: 1%; /* 靠右邊 */
-            bottom: 10%; /* 距離底部 */
-            z-index: 1000; /* 確保在最上層 */
-        }
-        
-        /* 限制圖片大小，避免變形 */
-        .cta-container img { 
-            width: 60px; /* 設定固定寬度 */
-            height: auto; /* 讓高度等比例縮放 */
-            display: block;
-            border-radius: 5px; /* 圓角 */
-        }
-        
-        /* ✅ 只在手機（max-width: 768px）隱藏 */
-        @media screen and (max-width: 768px) {
-            .cta-container {
-                display: none !important;
-            }
-        }
-        /*pc圖片一樣寬*/
-        .img_pc img{
-            width: 83%;
-            display: block;
-            margin: 0 auto;
-        }
-        /*第一塊輪播*/
-        .Area_01_1{
-           position: relative; 
-           overflow: hidden; 
-           transform: scale(0.91);
-        }
-        @media screen and (min-width: 768px) {
-            .img_pc.mt-4 {
-                margin-top: 4rem !important;
-            }
-        }
-        
-         @media screen and (max-width: 768px) {
-            .Area_01_1{
-                transform: scale(0.98);
-            }
-            .img_pc img{
-                width: 89%;
-            }
-         }
-         @media (max-width: 767px) {
-            .swiper-slide img {
-                width: 130%;  /* 放大圖片一點點，讓它不會顯得太小 */
-                height: auto; /* 確保圖片比例不會變形 */
-            }
-        }
-        @media (max-width: 767px) {
-            .swiper-slide img {
-                width: 100%;
-                height: auto; /* 確保圖片自適應 */
-            }
-        }
-        .CarouseBreath {
-            animation: Breath 4s infinite;
-            animation-timing-function: ease-in-out;
-        }
-
-        @keyframes Breath {
-            0% {
-                -webkit-filter: brightness(1) contrast(1);
-            }
-
-            50% {
-                -webkit-filter: brightness(1.1) contrast(1.1);
-            }
-
-            100% {
-                -webkit-filter: brightness(1) contrast(1);
-            }
-        }
-        .brightness1-play{ 
-            -webkit-animation:brightness1-play 2s infinite; 
-            animation:brightness1-play 3s infinite;
-        }
-        @keyframes brightness1-play {
-            0% { 
-                filter:brightness(100%);
-            }
-            88% { 
-                filter:brightness(100%);
-            }
-            90% { 
-                filter:brightness(120%);
-            }
-            96% { 
-                filter:brightness(100%);
-            }
-            98% { 
-                filter:brightness(120%);
-            }
-            100% { 
-                filter:brightness(100%);
-            }
-        }
-    </style>
-    <!-- BIOEDM ver0816 BNupdate-->
 </head>
-<!-- data-TimeSwitch_test="2022/07/29"-->
-
 <body>
     <div>
         <img src="images/topBtn.png" onclick="topFunction()" id="BIOScrolltoTopBtn" class="d-none d-md-block">
@@ -184,14 +78,14 @@
                     <div class="swiper-slide">
                         <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800036&p_orderType=4&showType=chessboardType"
                             target="_blank" title="B3">
-                            <img src="images/AA-Serum_2000x450.jpg" alt="抗老精華" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/AA-Serum_2000x560.jpg" alt="抗老精華" class="momoStyle_lazyload d-none d-md-block">
                             <img src="images/AA-Serum_960x960_.jpg" alt="抗老精華" class="momoStyle_lazyload d-md-none d-block">
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4"
                             target="_blank" title="UV">
-                            <img src="images/UV_2000x450.jpg" alt="UV" class="momoStyle_lazyload d-none d-md-block">
+                            <img src="images/UV_2000x560.jpg" alt="UV" class="momoStyle_lazyload d-none d-md-block">
                             <img src="images/UV_960x960.jpg" alt="UV" class="momoStyle_lazyload d-md-none d-block">
                         </a>
                     </div>
@@ -250,11 +144,11 @@
             <div class="row justify-content-center align-items-center pb-md-5 pb-4 px-md-5 px-1">
                 <!--- 滿額好禮 -->
                 <div class="col-12 img_pc mt-4">
-                    <img class="momoStyle_is-pc" src="images/section01-t.jpg" alt="好禮狂送">
+                    <img class="momoStyle_is-pc" src="images/section01-t.png" alt="好禮狂送">
                 </div>                 
                 <div class="col-12 img_pc mb-4">
                     <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800164&p_orderType=4&sourcePageType=4" target="_blank" title="好禮狂送">
-                        <img src="images/section01-1.jpg" alt="好禮狂送" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
+                        <img src="images/section01-1.png" alt="好禮狂送" class="momoStyle_lazyload d-none d-md-block d-md-none d-block">
                     </a>
                 </div>
                 <!-- BUNNY輪播 -->
