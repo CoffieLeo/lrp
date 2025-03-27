@@ -1,2 +1,0 @@
-# lrp
-MOMO_LRP
